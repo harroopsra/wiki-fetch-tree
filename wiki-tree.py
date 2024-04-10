@@ -4,8 +4,6 @@ import requests
 from urllib.parse import quote, unquote
 from arbitrarytree import *
 
-links = [] #For debugging, not used anymore
-
 def find_articles(givenTitle, root, depth = 3, n_links = 2): #skips the first one
 
     if root == None:
@@ -31,9 +29,6 @@ def find_articles(givenTitle, root, depth = 3, n_links = 2): #skips the first on
         #Remove the weird ones. Also remove the year pages i.e. the ones that start with digits which keep leading to other year-related pages
         if (title.startswith("/") or title[0].isdigit()):
             continue
-
-        #List containing all the links - this was for debugging
-        #links.append(title)
 
         print(title)
         nodeTitle = "{" + unquote(givenTitle) + ": " + title + "}"

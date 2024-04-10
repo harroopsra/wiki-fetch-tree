@@ -1,10 +1,15 @@
 # wiki-fetch-tree
-
-Started out as a project to mess around quickly with BeautifulSoup
-Ended up learning the MediaWiki Web service API and abandoning BeautifulSoup
-
-This project finds the top n links for a given Wikipedia page 'Title' and recursively builds a general tree of adjustable depth d by finding the next n links for each link found. It then prints out the tree.
-
+\
+This project finds the top n links for a given Wikipedia page 'Title' and recursively builds a general tree of adjustable depth d by finding the next n links for each link found. It then prints out the tree.\
+\
+\
+Depth is currently set to 3, n_links are set to 2 (because it prints out a nicer tree\
+Currently this project ignores certain wikis if they start with a digit or start with a "/"\
+A little slow because the 
+\
+\
+\
+### Examples
 So what the tree looks like for a title like ['Cool'](https://en.wikipedia.org/wiki/Cool) is:\
 -Cool \
 --{Cool: Bvndit} {Cool: CLIPS} \
@@ -25,3 +30,6 @@ Or for ['Art'](https://en.wikipedia.org/wiki/Art):\
 ---{A Philosophical Enquiry into the Origin of Our Ideas of the Sublime and Beautiful: A Vindication of Natural Society} {A Philosophical Enquiry into the Origin of Our Ideas of the Sublime and Beautiful: Abhinavagupta} \
 ----{A Vindication of Natural Society: A Conflict of Visions} {A Vindication of Natural Society: A Philosophical Enquiry into the Origin of Our Ideas of the Sublime and Beautiful} {Abhinavagupta: A. C. Bhaktivedanta Swami Prabhupada} {Abhinavagupta: A Philosophical Enquiry into the Origin of Our Ideas of the Sublime and Beautiful} \
 
+##### Comments
+Started out as a project to mess around quickly with BeautifulSoup. \
+Ended up using the MediaWiki Web service API and abandoning BeautifulSoup but it's worth coming back to, and I might replace the current API with the BeautifulSoup after all.\

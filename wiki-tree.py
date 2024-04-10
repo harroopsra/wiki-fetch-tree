@@ -6,12 +6,6 @@ from arbitrarytree import *
 
 links = [] #For debugging, not used anymore
 
-def cleanbrackets(title):
-    start = title.find(":")
-    end = title.find("}") - 1
-    title = title[start:end]
-    return title
-
 def find_articles(givenTitle, root, depth = 3, n_links = 2): #skips the first one
 
     if root == None:

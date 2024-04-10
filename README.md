@@ -5,9 +5,11 @@ This project finds the top n links for a given Wikipedia page 'Title' and recurs
 \
 Depth is currently set to 3, n_links are set to 2 (because it prints out a nicer tree\
 Currently this project ignores certain wikis if they start with a digit or start with a "/"\
+\
+\
+\
 
-\
-\
+
 ### Examples
 So what the tree looks like for a title like ['Cool'](https://en.wikipedia.org/wiki/Cool) is:\
 -Cool \

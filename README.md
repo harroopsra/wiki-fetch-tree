@@ -1,6 +1,6 @@
 # wiki-fetch-tree
 \
-This project finds the top n links for a given Wikipedia page 'Title' and recursively builds a general tree of adjustable depth d by finding the next n links for each link found. It then prints out the tree.\
+This project finds the top n links for a given Wikipedia page 'Title' and recursively builds a general tree of adjustable depth d by finding the next n links for each link found. It then prints out the tree.
 \
 \
 Depth is currently set to 3, n_links are set to 2 (because it prints out a nicer tree\
@@ -31,4 +31,4 @@ Or for ['Art'](https://en.wikipedia.org/wiki/Art):\
 
 ##### Comments
 Started out as a project to mess around quickly with BeautifulSoup. \
-Ended up using the MediaWiki Web service API and abandoning BeautifulSoup but it's worth coming back to, and I might replace the current API with the BeautifulSoup after all.\
+Ended up using the MediaWiki Web service API and abandoning BeautifulSoup but it's worth coming back to, and I might replace the current API with the BeautifulSoup after all.

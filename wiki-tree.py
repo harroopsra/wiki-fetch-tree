@@ -12,7 +12,7 @@ def cleanbrackets(title):
     title = title[start:end]
     return title
 
-def find_articles(givenTitle, root, depth = 3, start = True): #skips the first one
+def find_articles(givenTitle, root, depth = 3, n_links = 2): #skips the first one
 
     if root == None:
         return None
@@ -22,9 +22,9 @@ def find_articles(givenTitle, root, depth = 3, start = True): #skips the first o
 
     givenTitle = quote(givenTitle)
 
-    response = requests.get(f"https://en.wikipedia.org/w/api.php?action=query&format=json&prop=links&list=&meta=&titles={givenTitle}&formatversion=2&pllimit={2}")
+    response = requests.get(f"https://en.wikipedia.org/w/api.php?action=query&format=json&prop=links&list=&meta=&titles={givenTitle}&formatversion=2&pllimit={n_links}")
     data = response.json()
-    
+    print(f"Entered the function for this {givenTitle}. The data currently shown is", data["query"])
     links = data["query"]["pages"][0]["links"]
 
     #print("\nEntered for ",givenTitle)
@@ -34,14 +34,14 @@ def find_articles(givenTitle, root, depth = 3, start = True): #skips the first o
         this_depth = depth
         title=link["title"]
         
-        #Remove the weird ones. Also remove the year pages which keep leading to other years
+        #Remove the weird ones. Also remove the year pages i.e. the ones that start with digits which keep leading to other year-related pages
         if (title.startswith("/") or title[0].isdigit()):
             continue
 
         #List containing all the links - this was for debugging
         #links.append(title)
 
-        #print(title)
+        print(title)
         nodeTitle = "{" + unquote(givenTitle) + ": " + title + "}"
 
 
@@ -56,7 +56,7 @@ def find_articles(givenTitle, root, depth = 3, start = True): #skips the first o
             (root.children).append(child)
             #print("Children: ",root.children)
             newroot = root.children[-1] #latest appended
-            find_articles(title, root = newroot, depth = this_depth, start = False)
+            find_articles(title, root = newroot, depth = this_depth)
         else:
             #Tree
             #print(f"This root is {root.data}", end = "\n\n")
@@ -65,11 +65,11 @@ def find_articles(givenTitle, root, depth = 3, start = True): #skips the first o
     return root
 
 def main():
-    original_parent_title = "Cool"
+    original_parent_title = "Art"
     root = newNode(original_parent_title)
     root = find_articles(original_parent_title, root=root)
 
-    print("\n\n\nLevel Order Traversal")
+    print("Level Order Traversal\n")
     print(LevelOrderTraversal(root))
     
     

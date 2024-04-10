@@ -3,7 +3,7 @@
 This project finds the top n links for a given Wikipedia page 'Title' and recursively builds a general tree of adjustable depth d by finding the next n links for each link found. It then prints out the tree.
 \
 \
-Depth is currently set to 3, n_links are set to 2 (because it prints out a nicer tree\
+Depth is currently set to 3, n_links are set to 2 (because it prints out a nicer tree and it gets quite ugly with anything more)\
 Currently this project ignores certain wikis if they start with a digit or start with a "/"\
 \
 \

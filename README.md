@@ -31,6 +31,26 @@ Or for ['Art'](https://en.wikipedia.org/wiki/Art):\
 ---{A Philosophical Enquiry into the Origin of Our Ideas of the Sublime and Beautiful: A Vindication of Natural Society} {A Philosophical Enquiry into the Origin of Our Ideas of the Sublime and Beautiful: Abhinavagupta} \
 ----{A Vindication of Natural Society: A Conflict of Visions} {A Vindication of Natural Society: A Philosophical Enquiry into the Origin of Our Ideas of the Sublime and Beautiful} {Abhinavagupta: A. C. Bhaktivedanta Swami Prabhupada} {Abhinavagupta: A Philosophical Enquiry into the Origin of Our Ideas of the Sublime and Beautiful} 
 
+
+###Update
+\
+Added a nicer print format:\
+```
+\-Cough
+  |-K'aja – Aymara
+  | |-Guides to browsing Wikipedia
+  | | |-wikiversity:Special:Search/Guides to browsing Wikipedia
+  | | \-Case sensitivity
+  | \-Articles related to current events
+  \-Hyperpnea
+    |-Respiratory arrest
+    | |-Hypercapnia
+    | \-Stethoscope
+    \-Shortness of breath
+      |-Heart failure
+      \-Nefes darlığı – Turkish
+```
+
 ### Comments
 Started out as a project to mess around quickly with BeautifulSoup. \
 Ended up using the MediaWiki Web service API because of someone on stack overflow and abandoning BeautifulSoup but it's worth coming back to, and I might replace the current API with the BeautifulSoup after all. \

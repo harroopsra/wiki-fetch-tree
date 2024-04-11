@@ -2,9 +2,13 @@
 
 This project finds the top n links for a given Wikipedia page 'Title' and recursively builds a general tree of adjustable depth d by finding the next n links for each link found. It then prints out the tree.  
 
+
+The idea is to build little graphs to see relationships between different topics.  
+
   
-Depth is currently set to 3, n_links are set to 2 (because it prints out a nicer tree and it gets quite ugly with anything more)  
+Depth is currently set to 3, n_links are set to 2  
 Currently this project ignores certain wikis if they start with a digit or start with a "/"  
+Random is seeded at 1, we get max
 
 ### Examples
 So what the tree looks like for a title like ['Cool'](https://en.wikipedia.org/wiki/Cool) is:
@@ -32,7 +36,7 @@ Or for ['Art'](https://en.wikipedia.org/wiki/Art):
 ```
 
 ###Update  
-Added a nicer print format so it's much less of a hassle to figure out the parents of each node:  
+Added a nicer print format so it's much less of a hassle to figure out the parents of each node. Also can print with more links:  
 ```
 \-Cough
   |-K'aja – Aymara
@@ -48,10 +52,37 @@ Added a nicer print format so it's much less of a hassle to figure out the paren
       |-Heart failure
       \-Nefes darlığı – Turkish
 ```
-
+[Desperado (film)]()
+```
+\-Desperado (film)
+  |-Chicano rock
+  | |-Mexicans in Kansas
+  | |-Merengue music
+  | \-Argentine cumbia
+  |-Quentin Tarantino
+  | |-Bertrand Tavernier
+  | |-All-American Girl (TV series)
+  | \-Curdled (film)
+  \-Tito & Tarantula
+    |-Salma Hayek
+    \-Stoner rock
+```
+French film [Incendies](https://en.wikipedia.org/wiki/Incendies)  
+```
+\-Incendies
+  |-C.R.A.Z.Y.
+  | |-Bedouin
+  | |-Inconvenient Indian
+  | \-Canadian Screen Award for Best Sound Editing
+  |-Shoplifters (film)
+  | |-I, Daniel Blake
+  | |-National Board of Review Awards 2018
+  | \-Guldbagge Awards
+  \-Template talk:Canadian submission for Academy Awards
+    \-Portal:Canada
+```
 ### Comments
-~~Started out as a project to mess around quickly with BeautifulSoup. But I ended up using the MediaWiki Web service API because of someone on stack overflow and abandoning BeautifulSoup but it's worth coming back to, and I might replace the current API with the BeautifulSoup after all.~~  
-I replaced the API with BeautifulSoup but be careful, it might flag your IP
+~~Project to mess around quickly with BeautifulSoup and build cool relationships.~~
+But I ended up using the MediaWiki Web service API and abandoning BeautifulSoup. I replaced the BeautifulSoup with the MediaWiki API because I think Wikipedia flagged my IP and would mostly send me results with recommendations to log in
 ~~Also would be good to find a prettier way to print out the tree. Rn, it prints out by depth and you can see who the parent is by looking at the key in the key-value pair~~  
-
-  Replaced with a prettier print function
+  Replaced the previous print with a prettier print function so now relationships are clearer to trace

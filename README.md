@@ -35,7 +35,7 @@ Or for ['Art'](https://en.wikipedia.org/wiki/Art):
 ----{A Vindication of Natural Society: A Conflict of Visions} {A Vindication of Natural Society: A Philosophical Enquiry into the Origin of Our Ideas of the Sublime and Beautiful} {Abhinavagupta: A. C. Bhaktivedanta Swami Prabhupada} {Abhinavagupta: A Philosophical Enquiry into the Origin of Our Ideas of the Sublime and Beautiful} 
 ```
 
-###Update  
+### Update  
 Added a nicer print format so it's much less of a hassle to figure out the parents of each node. Also can print with more links:  
 ```
 \-Cough

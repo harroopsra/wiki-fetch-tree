@@ -82,7 +82,7 @@ French film [Incendies](https://en.wikipedia.org/wiki/Incendies)
     \-Portal:Canada
 ```
 ### Comments
-~~Project to mess around quickly with BeautifulSoup and build cool relationships.~~
-But I ended up using the MediaWiki Web service API and abandoning BeautifulSoup. I replaced the BeautifulSoup with the MediaWiki API because I think Wikipedia flagged my IP and would mostly send me results with recommendations to log in
-~~Also would be good to find a prettier way to print out the tree. Rn, it prints out by depth and you can see who the parent is by looking at the key in the key-value pair~~  
+~~Project to mess around quickly with BeautifulSoup and build cool relationships.~~\
+But I ended up using the MediaWiki Web service API and abandoning BeautifulSoup. I replaced the BeautifulSoup with the MediaWiki API because I think Wikipedia flagged my IP and would mostly send me results with recommendations to log in\
+~~Also would be good to find a prettier way to print out the tree. Rn, it prints out by depth and you can see who the parent is by looking at the key in the key-value pair~~  \
   Replaced the previous print with a prettier print function so now relationships are clearer to trace

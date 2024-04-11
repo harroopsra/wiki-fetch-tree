@@ -50,8 +50,8 @@ Added a nicer print format so it's much less of a hassle to figure out the paren
 ```
 
 ### Comments
-~~Started out as a project to mess around quickly with BeautifulSoup. But I ended up using the MediaWiki Web service API because of someone on stack overflow and abandoning BeautifulSoup but it's worth coming back to, and I might replace the current API with the BeautifulSoup after all.~~
-Replaced with BeautifulSoup but be careful, it might flag your IP
-~~Also would be good to find a prettier way to print out the tree. Rn, it prints out by depth and you can see who the parent is by looking at the key in the key-value pair~~
-<br>
-Replaced with a prettier print function
+~~Started out as a project to mess around quickly with BeautifulSoup. But I ended up using the MediaWiki Web service API because of someone on stack overflow and abandoning BeautifulSoup but it's worth coming back to, and I might replace the current API with the BeautifulSoup after all.~~  
+I replaced the API with BeautifulSoup but be careful, it might flag your IP
+~~Also would be good to find a prettier way to print out the tree. Rn, it prints out by depth and you can see who the parent is by looking at the key in the key-value pair~~  
+
+  Replaced with a prettier print function

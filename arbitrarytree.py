@@ -3,6 +3,23 @@ class Node:
         self.children = []
         self.data = data
 
+    def printPretty(self, indent: str, last: bool):
+            if self == None:
+                return
+            print(indent, end = "")
+            if (last):
+                print("\\-", end = "")
+                indent += "  "
+            else:
+                print("|-", end = "")
+                indent += "| "
+            print(self.data, end = "\n")
+    
+            i=0
+            while i < len(self.children):
+                self.children[i].printPretty(indent, i == len(self.children) - 1);
+                i+=1
+
 def newNode(data):
     temp = Node(data)
     return temp

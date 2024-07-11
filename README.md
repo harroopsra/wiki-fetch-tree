@@ -10,32 +10,9 @@ Depth is currently set to 3, n_links are set to 2
 Currently this project ignores certain wikis if they start with a digit or start with a "/"  
 Random is seeded at 1, we get max
 
-### Examples
-So what the tree looks like for a title like ['Cool'](https://en.wikipedia.org/wiki/Cool) is:
-```
--Cool \
---{Cool: Bvndit} {Cool: CLIPS} 
----{Bvndit: All caps} {CLIPS: Attempto Controlled English} {CLIPS: Automated planning and scheduling} 
-----{All caps: ASCII} {All caps: ASCII table} {Attempto Controlled English: Automated planning and scheduling} {Attempto Controlled English: Automated reasoning} {Automated planning and scheduling: AI boom} {Automated planning and scheduling: AI control problem} 
-```
 
-Or for something like ['Movie'](https://en.wikipedia.org/wiki/Movie), the output is:
-```
--Movie 
---{Movie: Film} {Movie: Synonym} 
----{Synonym: -onym} {Synonym: Ancient Greek language} 
-----{-onym: Abrahamic faiths} {-onym: Academic degree} {Ancient Greek language: Ancient Greek} {Ancient Greek language: Wikipedia:1}
-```
 
-Or for ['Art'](https://en.wikipedia.org/wiki/Art):
-```
--Art \
---{Art: A Philosophical Enquiry into the Origin of Our Ideas of the Sublime and Beautiful} \
----{A Philosophical Enquiry into the Origin of Our Ideas of the Sublime and Beautiful: A Vindication of Natural Society} {A Philosophical Enquiry into the Origin of Our Ideas of the Sublime and Beautiful: Abhinavagupta} \
-----{A Vindication of Natural Society: A Conflict of Visions} {A Vindication of Natural Society: A Philosophical Enquiry into the Origin of Our Ideas of the Sublime and Beautiful} {Abhinavagupta: A. C. Bhaktivedanta Swami Prabhupada} {Abhinavagupta: A Philosophical Enquiry into the Origin of Our Ideas of the Sublime and Beautiful} 
-```
-
-### Update  
+### Updated Examples  
 Added a nicer print format so it's much less of a hassle to figure out the parents of each node. Also can print with more links:  
 ```
 \-Cough
@@ -81,6 +58,33 @@ French film [Incendies](https://en.wikipedia.org/wiki/Incendies)
   \-Template talk:Canadian submission for Academy Awards
     \-Portal:Canada
 ```
+
+### Older Examples
+Older print function
+So what the tree looks like for a title like ['Cool'](https://en.wikipedia.org/wiki/Cool) is:
+```
+-Cool \
+--{Cool: Bvndit} {Cool: CLIPS} 
+---{Bvndit: All caps} {CLIPS: Attempto Controlled English} {CLIPS: Automated planning and scheduling} 
+----{All caps: ASCII} {All caps: ASCII table} {Attempto Controlled English: Automated planning and scheduling} {Attempto Controlled English: Automated reasoning} {Automated planning and scheduling: AI boom} {Automated planning and scheduling: AI control problem} 
+```
+
+Or for something like ['Movie'](https://en.wikipedia.org/wiki/Movie), the output is:
+```
+-Movie 
+--{Movie: Film} {Movie: Synonym} 
+---{Synonym: -onym} {Synonym: Ancient Greek language} 
+----{-onym: Abrahamic faiths} {-onym: Academic degree} {Ancient Greek language: Ancient Greek} {Ancient Greek language: Wikipedia:1}
+```
+
+Or for ['Art'](https://en.wikipedia.org/wiki/Art):
+```
+-Art \
+--{Art: A Philosophical Enquiry into the Origin of Our Ideas of the Sublime and Beautiful} \
+---{A Philosophical Enquiry into the Origin of Our Ideas of the Sublime and Beautiful: A Vindication of Natural Society} {A Philosophical Enquiry into the Origin of Our Ideas of the Sublime and Beautiful: Abhinavagupta} \
+----{A Vindication of Natural Society: A Conflict of Visions} {A Vindication of Natural Society: A Philosophical Enquiry into the Origin of Our Ideas of the Sublime and Beautiful} {Abhinavagupta: A. C. Bhaktivedanta Swami Prabhupada} {Abhinavagupta: A Philosophical Enquiry into the Origin of Our Ideas of the Sublime and Beautiful} 
+```
+
 ### Comments
 ~~Project to mess around quickly with BeautifulSoup and build cool relationships.~~\
 But I ended up using the MediaWiki Web service API and abandoning BeautifulSoup. I replaced the BeautifulSoup with the MediaWiki API because I think Wikipedia flagged my IP and would mostly send me results with recommendations to log in\
